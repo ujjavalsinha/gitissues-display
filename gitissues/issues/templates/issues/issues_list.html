@@ -1,10 +1,14 @@
 {%extends 'base.html'%}
 {%block content%}
 <main>
+  {%if user.is_authenticated%}
   {%for issues_list in all_issues%}
       <p id="title"><a href="{%url 'issues:issue_detail' id=issues_list.number%}">{{issues_list.title}}</a></p>
       <p id="content">{{issues_list.body|truncatechars:200}}</p>
       <hr></hr>
+  {%else%}
+    <h1 id="note">Please Login to get the list of issues</h1>
+  {%endif%}
   {%endfor%}
 </main>
 {%endblock%}
