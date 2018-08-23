@@ -34,6 +34,9 @@ main #content{
   font-size: 1.2em;
 
 }
+main #note{
+  font-family: 'Josefin Sans', sans-serif;
+  
 main #name{
   font-family: 'Nunito', sans-serif;
   font-size:1.4em;
