@@ -1,0 +1,19 @@
+{%extends 'base.html'%}
+{%block content%}
+<main>
+    <img src="{{avatar}}" alt="" height="150" width="150">
+    <p id="name">{{name}}</p>
+    <hr></hr>
+    <p id="isstitle">{{title}}</p>
+    <p id="isscontent">{{body}}</p>
+    <hr></hr>
+    <p id="headcomm">Comments:</p>
+      {%for comment_list in allcomments%}
+      <p id="commentname">{{comment_list.name}}</p>
+      <p id="commentbody">{{comment_list.body}}</p>
+      {%endfor%}
+
+
+
+</main>
+{%endblock%}

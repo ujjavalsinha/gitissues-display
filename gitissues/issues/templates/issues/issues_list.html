@@ -1,0 +1,10 @@
+{%extends 'base.html'%}
+{%block content%}
+<main>
+  {%for issues_list in all_issues%}
+      <p id="title"><a href="{%url 'issues:issue_detail' id=issues_list.number%}">{{issues_list.title}}</a></p>
+      <p id="content">{{issues_list.body|truncatechars:200}}</p>
+      <hr></hr>
+  {%endfor%}
+</main>
+{%endblock%}
