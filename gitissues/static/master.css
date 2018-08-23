@@ -96,11 +96,9 @@ header{
 }
 nav{
   grid-area:nav;
-  position:fixed;
   width:100%;
   height:100px;
   box-sizing:border-box;
-  transition:.3s;
 }
 main{
   grid-area:main;
