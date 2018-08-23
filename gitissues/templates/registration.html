@@ -1,9 +1,10 @@
 {%extends 'base.html'%}
+{%load bootstrap3%}
 {%block content%}
 <main>
   <form class="" action="{%url 'issues:login'%}" method="post">
     {%csrf_token%}
-    {{form.as_p}}
+    {%bootstrap_form form%}
     <input type="submit" name="" value="SignUp">
 
   </form>
